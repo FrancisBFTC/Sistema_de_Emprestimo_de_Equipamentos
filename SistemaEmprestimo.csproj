@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{913718C3-3B89-4AC8-879E-62EE6B1DF8DC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AgendamentoJanela</RootNamespace>
+    <AssemblyName>AgendamentoJanela</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\Agendamento.cs" />
+    <Compile Include="Model\Cadastro.cs" />
+    <Compile Include="Model\Emprestimo.cs" />
+    <Compile Include="Model\Equipamento.cs" />
+    <Compile Include="Model\Professor.cs" />
+    <Compile Include="View\JanelaAgendamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\JanelaAgendamento.Designer.cs">
+      <DependentUpon>JanelaAgendamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\JanelaCancelamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\JanelaCancelamento.Designer.cs">
+      <DependentUpon>JanelaCancelamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\JanelaDisponibilidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\JanelaDisponibilidade.Designer.cs">
+      <DependentUpon>JanelaDisponibilidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\JanelaEntregues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\JanelaEntregues.Designer.cs">
+      <DependentUpon>JanelaEntregues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\JanelaEquipamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\JanelaEquipamento.Designer.cs">
+      <DependentUpon>JanelaEquipamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\JanelaFechamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\JanelaFechamento.Designer.cs">
+      <DependentUpon>JanelaFechamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\JanelaListagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\JanelaListagem.Designer.cs">
+      <DependentUpon>JanelaListagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\JanelaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\JanelaPrincipal.Designer.cs">
+      <DependentUpon>JanelaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\JanelaProfessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\JanelaProfessor.Designer.cs">
+      <DependentUpon>JanelaProfessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <EmbeddedResource Include="View\JanelaAgendamento.resx">
+      <DependentUpon>JanelaAgendamento.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\JanelaCancelamento.resx">
+      <DependentUpon>JanelaCancelamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\JanelaDisponibilidade.resx">
+      <DependentUpon>JanelaDisponibilidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\JanelaEntregues.resx">
+      <DependentUpon>JanelaEntregues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\JanelaEquipamento.resx">
+      <DependentUpon>JanelaEquipamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\JanelaFechamento.resx">
+      <DependentUpon>JanelaFechamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\JanelaListagem.resx">
+      <DependentUpon>JanelaListagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\JanelaPrincipal.resx">
+      <DependentUpon>JanelaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\JanelaProfessor.resx">
+      <DependentUpon>JanelaProfessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="..\SistemaAgendamento\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
+    <None Include="..\SistemaAgendamento\README.md">
+      <Link>README.md</Link>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\SistemaAgendamento\.gitattributes">
+      <Link>.gitattributes</Link>
+    </Content>
+    <Content Include="..\SistemaAgendamento\.gitignore">
+      <Link>.gitignore</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
