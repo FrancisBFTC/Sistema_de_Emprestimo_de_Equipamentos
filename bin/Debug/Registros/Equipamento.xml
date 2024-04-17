@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Registros>
+  <Equipamento>
+    <ID>1</ID>
+    <Nome>Caixa de Som</Nome>
+    <Tipo>Auditivo</Tipo>
+    <Quantidade>5</Quantidade>
+  </Equipamento>
+  <Equipamento>
+    <ID>2</ID>
+    <Nome>Projetor de Dados</Nome>
+    <Tipo>Visual</Tipo>
+    <Quantidade>3</Quantidade>
+  </Equipamento>
+  <Equipamento>
+    <ID>3</ID>
+    <Nome>Microfone</Nome>
+    <Tipo>Sonoro</Tipo>
+    <Quantidade>5</Quantidade>
+  </Equipamento>
+</Registros>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Registros>
+  <Professor>
+    <ID>1</ID>
+    <Nome>Wenderson Francisco</Nome>
+    <Disciplina>Tecnologia</Disciplina>
+    <Turmas>6ª e 7ª</Turmas>
+  </Professor>
+  <Professor>
+    <ID>2</ID>
+    <Nome>Matheus Henrique</Nome>
+    <Disciplina>Portugues</Disciplina>
+    <Turmas>5ª e 8ª</Turmas>
+  </Professor>
+  <Professor>
+    <ID>3</ID>
+    <Nome>Gabriel Da Silva</Nome>
+    <Disciplina>Ciências</Disciplina>
+    <Turmas>9ª ano</Turmas>
+  </Professor>
+</Registros>

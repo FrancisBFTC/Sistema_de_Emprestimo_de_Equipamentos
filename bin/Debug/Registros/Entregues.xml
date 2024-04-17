@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Registros>
+  <Entregues>
+    <ID>1</ID>
+    <Nome>Matheus Henrique</Nome>
+    <Equipamento>Caixa de Som</Equipamento>
+    <DataInicial>15/04/2024 07:00:00</DataInicial>
+    <DataFinal>15/04/2024 09:00:00</DataFinal>
+  </Entregues>
+  <Entregues>
+    <ID>2</ID>
+    <Nome>Wenderson Francisco</Nome>
+    <Equipamento>Caixa de Som</Equipamento>
+    <DataInicial>17/05/2024 06:00:00</DataInicial>
+    <DataFinal>17/05/2024 07:00:00</DataFinal>
+  </Entregues>
+  <Entregues>
+    <ID>3</ID>
+    <Nome>Matheus Henrique</Nome>
+    <Equipamento>Projetor de Dados</Equipamento>
+    <DataInicial>17/05/2024 07:00:00</DataInicial>
+    <DataFinal>17/05/2024 08:00:00</DataFinal>
+  </Entregues>
+  <Entregues>
+    <ID>4</ID>
+    <Nome>Gabriel Da Silva</Nome>
+    <Equipamento>Microfone</Equipamento>
+    <DataInicial>17/04/2024 14:40:00</DataInicial>
+    <DataFinal>17/04/2024 22:00:00</DataFinal>
+  </Entregues>
+  <Entregues>
+    <ID>5</ID>
+    <Nome>Gabriel Da Silva</Nome>
+    <Equipamento>Microfone</Equipamento>
+    <DataInicial>17/04/2024 14:40:00</DataInicial>
+    <DataFinal>17/04/2024 22:00:00</DataFinal>
+  </Entregues>
+  <Entregues>
+    <ID>6</ID>
+    <Nome>Matheus Henrique</Nome>
+    <Equipamento>Microfone</Equipamento>
+    <DataInicial>18/04/2024 07:00:00</DataInicial>
+    <DataFinal>18/04/2024 12:00:00</DataFinal>
+  </Entregues>
+  <Entregues>
+    <ID>7</ID>
+    <Nome>Matheus Henrique</Nome>
+    <Equipamento>Microfone</Equipamento>
+    <DataInicial>18/04/2024 07:00:00</DataInicial>
+    <DataFinal>18/04/2024 12:00:00</DataFinal>
+  </Entregues>
+  <Entregues>
+    <ID>8</ID>
+    <Nome>Matheus Henrique</Nome>
+    <Equipamento>Microfone</Equipamento>
+    <DataInicial>18/04/2024 07:00:00</DataInicial>
+    <DataFinal>18/04/2024 12:00:00</DataFinal>
+  </Entregues>
+  <Entregues>
+    <ID>9</ID>
+    <Nome>Matheus Henrique</Nome>
+    <Equipamento>Microfone</Equipamento>
+    <DataInicial>18/04/2024 07:00:00</DataInicial>
+    <DataFinal>18/04/2024 12:00:00</DataFinal>
+  </Entregues>
+  <Entregues>
+    <ID>10</ID>
+    <Nome>Matheus Henrique</Nome>
+    <Equipamento>Microfone</Equipamento>
+    <DataInicial>18/04/2024 07:00:00</DataInicial>
+    <DataFinal>18/04/2024 12:00:00</DataFinal>
+  </Entregues>
+  <Entregues>
+    <ID>11</ID>
+    <Nome>Matheus Henrique</Nome>
+    <Equipamento>Projetor de Dados</Equipamento>
+    <DataInicial>18/04/2024 07:00:00</DataInicial>
+    <DataFinal>18/04/2024 12:00:00</DataFinal>
+  </Entregues>
+  <Entregues>
+    <ID>12</ID>
+    <Nome>Matheus Henrique</Nome>
+    <Equipamento>Projetor de Dados</Equipamento>
+    <DataInicial>18/04/2024 07:00:00</DataInicial>
+    <DataFinal>18/04/2024 12:00:00</DataFinal>
+  </Entregues>
+  <Entregues>
+    <ID>13</ID>
+    <Nome>Matheus Henrique</Nome>
+    <Equipamento>Projetor de Dados</Equipamento>
+    <DataInicial>18/04/2024 12:00:00</DataInicial>
+    <DataFinal>18/04/2024 13:00:00</DataFinal>
+  </Entregues>
+  <Entregues>
+    <ID>14</ID>
+    <Nome>Matheus Henrique</Nome>
+    <Equipamento>Projetor de Dados</Equipamento>
+    <DataInicial>18/04/2024 12:00:00</DataInicial>
+    <DataFinal>18/04/2024 13:00:00</DataFinal>
+  </Entregues>
+  <Entregues>
+    <ID>15</ID>
+    <Nome>Matheus Henrique</Nome>
+    <Equipamento>Projetor de Dados</Equipamento>
+    <DataInicial>18/04/2024 12:00:00</DataInicial>
+    <DataFinal>18/04/2024 13:00:00</DataFinal>
+  </Entregues>
+  <Entregues>
+    <ID>16</ID>
+    <Nome>Matheus Henrique</Nome>
+    <Equipamento>Caixa de Som</Equipamento>
+    <DataInicial>18/04/2024 12:00:00</DataInicial>
+    <DataFinal>18/04/2024 13:00:00</DataFinal>
+  </Entregues>
+  <Entregues>
+    <ID>17</ID>
+    <Nome>Matheus Henrique</Nome>
+    <Equipamento>Caixa de Som</Equipamento>
+    <DataInicial>18/04/2024 12:00:00</DataInicial>
+    <DataFinal>18/04/2024 13:00:00</DataFinal>
+  </Entregues>
+  <Entregues>
+    <ID>18</ID>
+    <Nome>Matheus Henrique</Nome>
+    <Equipamento>Caixa de Som</Equipamento>
+    <DataInicial>18/04/2024 12:00:00</DataInicial>
+    <DataFinal>18/04/2024 13:00:00</DataFinal>
+  </Entregues>
+  <Entregues>
+    <ID>19</ID>
+    <Nome>Matheus Henrique</Nome>
+    <Equipamento>Caixa de Som</Equipamento>
+    <DataInicial>18/04/2024 12:00:00</DataInicial>
+    <DataFinal>18/04/2024 13:00:00</DataFinal>
+  </Entregues>
+</Registros>
