@@ -1,9 +1,9 @@
-﻿using System;
+﻿using AgendamentoModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using System.Xml.Linq;
-using AgendamentoModel;
 
 namespace AgendamentoView
 {
@@ -44,7 +44,7 @@ namespace AgendamentoView
             var consulta = (textBox.Equals(textProfessor)) ? new Professor().Coletar() :
                                                              new Equipamento().Coletar();
 
-            if(consulta != null)
+            if (consulta != null)
             {
                 if (consulta.Any())
                 {

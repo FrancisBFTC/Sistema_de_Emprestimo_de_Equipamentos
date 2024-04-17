@@ -27,7 +27,8 @@ namespace AgendamentoModel
         /// Construtor de Cadastro que define o diretório principal
         /// de dados
         /// </summary>
-        public Cadastro() {
+        public Cadastro()
+        {
             this.XmlPath = "Registros/";
         }
 

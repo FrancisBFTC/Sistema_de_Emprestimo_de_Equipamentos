@@ -1,8 +1,8 @@
 ﻿using System;
-using System.IO;
 using System.Collections.Generic;
-using System.Xml.Linq;
+using System.IO;
 using System.Linq;
+using System.Xml.Linq;
 
 namespace AgendamentoModel
 {
@@ -11,7 +11,7 @@ namespace AgendamentoModel
         /// <summary>
         /// Atributos de dados que vão sobreescrever da Classe herdada Cadastro
         /// </summary>
-        public override string Nome {  get; set; }
+        public override string Nome { get; set; }
         public override string XmlPath { get; set; }
         public override String TipoRegistro { get; set; }
         public override int ID { get; set; }

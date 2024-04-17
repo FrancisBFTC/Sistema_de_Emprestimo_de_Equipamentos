@@ -1,11 +1,11 @@
-﻿using System;
-using System.Windows.Forms;
-using System.Text.RegularExpressions;
+﻿using AgendamentoModel;
+using SistemaEmprestimo.Controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
 using System.Xml.Linq;
-using AgendamentoModel;
-using SistemaEmprestimo.Controller;
 
 namespace AgendamentoView
 {
@@ -65,7 +65,7 @@ namespace AgendamentoView
             menuStrip.Items.Clear();
             menuStrip.Items.Add("-");
 
-            textBox = (TextBox) sender;
+            textBox = (TextBox)sender;
 
             var consulta = (textBox.Equals(textProfessor)) ? new Professor().Coletar() :
                                                              new Equipamento().Coletar();
@@ -142,7 +142,7 @@ namespace AgendamentoView
 
             if (errorFormat = conteudoDataInicial.Length < 10 || conteudoDataFinal.Length < 10)
                 MessageBox.Show("Tamanho de data inválido!", "Formato Inválido", MessageBoxButtons.OK);
-            else if(errorFormat = conteudoHoraInicial.Length < 8 || conteudoHoraFinal.Length < 8)
+            else if (errorFormat = conteudoHoraInicial.Length < 8 || conteudoHoraFinal.Length < 8)
                 MessageBox.Show("Tamanho de hora inválido!", "Formato Inválido", MessageBoxButtons.OK);
             else if (errorFormat = !regexData.IsMatch(conteudoDataInicial) || !regexData.IsMatch(conteudoDataFinal))
                 MessageBox.Show("Formato de data inválido!", "Formato Inválido", MessageBoxButtons.OK);
@@ -227,7 +227,7 @@ namespace AgendamentoView
             int length = textBoxObject.TextLength;
             for (int i = -1; i < 5; i += 3, index++)
             {
-                if (length == (i+3) && !temCaractere[index])
+                if (length == (i + 3) && !temCaractere[index])
                 {
                     textBoxObject.AppendText(simbol);
                     temCaractere[index] = true;

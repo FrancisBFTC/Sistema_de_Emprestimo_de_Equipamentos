@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
-using System.Windows.Forms;
 using System.Xml.Linq;
 
 namespace SistemaEmprestimo.Controller
@@ -74,7 +72,7 @@ namespace SistemaEmprestimo.Controller
 
             bool horarioLivre = false;
 
-            foreach(var item in consulta)
+            foreach (var item in consulta)
             {
                 DateTime livreAtual = Convert.ToDateTime(item.Element("DataInicial").Value);
                 DateTime livreFinal;

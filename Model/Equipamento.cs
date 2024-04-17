@@ -1,8 +1,8 @@
 ﻿using System;
-using System.IO;
 using System.Collections.Generic;
-using System.Xml.Linq;
+using System.IO;
 using System.Linq;
+using System.Xml.Linq;
 
 namespace AgendamentoModel
 {
@@ -25,7 +25,8 @@ namespace AgendamentoModel
         /// <summary>
         /// Atributo de instância sobreescrita da Classe Cadastro do Documento XML
         /// </summary>
-        public override XDocument XmlDoc { 
+        public override XDocument XmlDoc
+        {
             get => base.XmlDoc; 
             set => base.XmlDoc = value; 
         }
@@ -88,7 +89,9 @@ namespace AgendamentoModel
             {
                 XmlDoc = XDocument.Load(XmlPath);
                 XmlAppend();
-            } catch(Exception e) {
+            }
+            catch (Exception e)
+            {
                 if (e is FileNotFoundException)
                 {
                     Console.WriteLine("Arquivo de dados não existente! Criando agora...");
@@ -116,7 +119,7 @@ namespace AgendamentoModel
                              where ((int)registro.Element("ID")) == this.ID
                              select registro;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 e.GetHashCode();
                 return;
@@ -135,7 +138,7 @@ namespace AgendamentoModel
             {
                 XmlDoc = XDocument.Load(XmlPath);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 e.GetHashCode();
                 return null;

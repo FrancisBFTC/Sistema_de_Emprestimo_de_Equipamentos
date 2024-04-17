@@ -1,7 +1,7 @@
-﻿using System;
+﻿using AgendamentoModel;
+using System;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using AgendamentoModel;
 
 namespace AgendamentoView
 {

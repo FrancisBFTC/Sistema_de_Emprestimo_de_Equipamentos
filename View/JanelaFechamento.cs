@@ -1,9 +1,9 @@
-﻿using System;
+﻿using AgendamentoModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using System.Xml.Linq;
-using AgendamentoModel;
 
 namespace AgendamentoView
 {
@@ -109,7 +109,7 @@ namespace AgendamentoView
 
         private void BotaoFechar_ClickEvent(object sender, EventArgs e)
         {
-            if(dataGridView != null)
+            if (dataGridView != null)
             {
                 if (dataGridView.SelectedRows.Count > 0)
                 {

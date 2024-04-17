@@ -1,10 +1,10 @@
-﻿using System;
+﻿using AgendamentoModel;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 using System.Xml.Linq;
-using AgendamentoModel;
 
 namespace AgendamentoView
 {
@@ -50,7 +50,8 @@ namespace AgendamentoView
             Emprestimo emprestimo = new Emprestimo();
             IEnumerable<XElement> consulta = emprestimo.ColetarLivres();
 
-            if (!isAllData) {
+            if (!isAllData)
+            {
 
                 textBox = (TextBox)sender;
                 int i = textBox.Equals(textData) ? 0 : 1;

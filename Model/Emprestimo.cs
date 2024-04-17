@@ -1,9 +1,9 @@
-﻿using System;
-using System.IO;
+﻿using SistemaEmprestimo.Controller;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Xml.Linq;
-using SistemaEmprestimo.Controller;
 
 namespace AgendamentoModel
 {
@@ -22,7 +22,7 @@ namespace AgendamentoModel
         /// </summary>
         public String Equipamento { get; set; }
         public String DataInicial { get; set; }
-        public String DataFinal {  get; set; }
+        public String DataFinal { get; set; }
 
         /// <summary>
         /// Atributo de instância sobreescrita da Classe Cadastro do Documento XML
@@ -126,7 +126,7 @@ namespace AgendamentoModel
             TipoRegistro = "Entregues";
             this.Registrar();
             TipoRegistro = "Emprestimo";
-            XmlPath = "Registros/"+TipoRegistro+".xml";
+            XmlPath = "Registros/" + TipoRegistro + ".xml";
             this.Excluir();
         }
 
@@ -269,7 +269,7 @@ namespace AgendamentoModel
         public IEnumerable<XElement> ColetarEntregues()
         {
             TipoRegistro = "Entregues";
-            XmlPath = "Registros/"+TipoRegistro+".xml";
+            XmlPath = "Registros/" + TipoRegistro + ".xml";
             return this.Coletar();
         }
 
