@@ -122,6 +122,7 @@ namespace AgendamentoModel
             }
             catch (Exception e)
             {
+                e.GetHashCode();
                 return;
             }
             base.Excluir();
@@ -141,6 +142,7 @@ namespace AgendamentoModel
             }
             catch (Exception e)
             {
+                e.GetHashCode();
                 return null;
             }
 
@@ -161,6 +163,7 @@ namespace AgendamentoModel
             }
             catch (Exception e)
             {
+                e.GetHashCode();
                 return null;
             }
             var consulta = from professor in XmlDoc.Descendants(TipoRegistro)

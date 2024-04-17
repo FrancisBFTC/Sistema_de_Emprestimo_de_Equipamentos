@@ -59,7 +59,7 @@ namespace AgendamentoView
             this.botaoProfessor.TabIndex = 19;
             this.botaoProfessor.Text = "Cadastrar";
             this.botaoProfessor.UseVisualStyleBackColor = false;
-            this.botaoProfessor.Click += new System.EventHandler(this.botaoProfessor_Event);
+            this.botaoProfessor.Click += new System.EventHandler(this.BotaoProfessor_Event);
             // 
             // textTurmas
             // 

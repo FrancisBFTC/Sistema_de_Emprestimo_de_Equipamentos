@@ -1,15 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using AgendamentoModel;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Header;
 
 namespace AgendamentoView
 {
@@ -27,7 +22,7 @@ namespace AgendamentoView
         {
             textData.KeyDown += TextDisponibilidade_KeyDown;
             textHora.KeyDown += TextDisponibilidade_KeyDown;
-            UpdateTable(sender, "", true);
+            UpdateTable(sender, true);
         }
 
         private void TextDisponibilidade_KeyDown(object sender, KeyEventArgs e)
@@ -38,13 +33,10 @@ namespace AgendamentoView
 
         public void InitializeFilter(Object sender)
         {
-            textBox = (TextBox)sender;
-            String itemText = textBox.Text;
-            UpdateTable(sender, itemText, false);
-
+            UpdateTable(sender, false);
         }
 
-        private void UpdateTable(Object sender, String nomeText, bool isAllData)
+        private void UpdateTable(Object sender, bool isAllData)
         {
             listaDisponibilidade.BeginUpdate();
             listaDisponibilidade.Items.Clear();
@@ -61,21 +53,14 @@ namespace AgendamentoView
             if (!isAllData) {
 
                 textBox = (TextBox)sender;
-                if (textBox.Equals(textData))
-                {
+                int i = textBox.Equals(textData) ? 0 : 1;
+                    
                     var dadoXML = from registro in emprestimo.XmlDoc.Descendants(emprestimo.TipoRegistro)
-                                  where ((String)registro.Element("DataInicial")).Split(' ')[0].Contains(textBox.Text) ||
-                                        ((String)registro.Element("DataFinal")).Split(' ')[0].Contains(textBox.Text)
+                              where ((String)registro.Element("DataInicial")).Split(' ')[i].Contains(textBox.Text) ||
+                                    ((String)registro.Element("DataFinal")).Split(' ')[i].Contains(textBox.Text)
                                   select registro;
                     consulta = dadoXML;
-                }
-                else {
-                    var dadoXML = from registro in emprestimo.XmlDoc.Descendants(emprestimo.TipoRegistro)
-                                  where ((String)registro.Element("DataInicial")).Split(' ')[1].Contains(textBox.Text) ||
-                                        ((String)registro.Element("DataFinal")).Split(' ')[1].Contains(textBox.Text)
-                                  select registro;
-                    consulta = dadoXML;
-                }
+           
             }
                
             if (consulta.Any())

@@ -233,7 +233,7 @@ namespace AgendamentoView
                     temCaractere[index] = true;
                     return;
                 }
-                temCaractere[index] = (temCaractere[index] && length <= (i + 3)) ? false : temCaractere[index];
+                temCaractere[index] = (!temCaractere[index] || length > (i + 3)) && temCaractere[index];
             }
         }
     }

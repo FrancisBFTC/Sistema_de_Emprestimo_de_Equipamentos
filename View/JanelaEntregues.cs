@@ -93,7 +93,6 @@ namespace AgendamentoView
 
                 foreach (var item in consulta)
                 {
-                    string id = item.Element("ID").Value;
                     string nome = item.Element("Nome").Value;
                     string equip = item.Element("Equipamento").Value;
                     string inicio = item.Element("DataInicial").Value;
@@ -116,11 +115,5 @@ namespace AgendamentoView
             listaEntregues.EndUpdate();
         }
 
-        private void ListaEntregues_ClickEvent(object sender, EventArgs e)
-        {
-            string message = "Índice do Item Clicado: " + listaEntregues.SelectedIndex.ToString()
-                            + "\nItem Clicado: " + listaEntregues.SelectedItem.ToString();
-            MessageBox.Show(message, "Click de Item", MessageBoxButtons.OK);
-        }
     }
 }

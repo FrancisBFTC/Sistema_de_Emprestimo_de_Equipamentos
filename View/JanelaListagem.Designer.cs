@@ -152,7 +152,6 @@
             this.listaListagem.Name = "listaListagem";
             this.listaListagem.Size = new System.Drawing.Size(446, 184);
             this.listaListagem.TabIndex = 0;
-            this.listaListagem.DoubleClick += new System.EventHandler(this.ListaListagem_ClickEvent);
             // 
             // JanelaListagem
             // 

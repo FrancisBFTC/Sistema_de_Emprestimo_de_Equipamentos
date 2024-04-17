@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using SistemaEmprestimo.Controller;
 
@@ -48,20 +41,8 @@ namespace AgendamentoView
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void botaoCriar_Event(object sender, EventArgs e)
+        private void BotaoCriar_Event(object sender, EventArgs e)
         {
-            /*
-            string message = "Deseja fechar esta janela?";
-            string caption = "Botão de Agendar Empréstimo";
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show(message, caption, buttons);
-
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-            }
-            */
-
             new JanelaAgendamento().Show();
         }
 
@@ -71,25 +52,8 @@ namespace AgendamentoView
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void botaoCancelar_Event(object sender, EventArgs e)
+        private void BotaoCancelar_Event(object sender, EventArgs e)
         {
-            /*
-            string message = "Deseja fechar esta janela?";
-            string caption = "Botão de Cancelar Agendamentos";
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show(message, caption, buttons);
-
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-            }
-            */
-
-            // TODO: transformar código abaixo em classe
-            //Form janelaCancelar = new Form();
-            //janelaCancelar.Text = "Cancelar Agendamentos";
-            //janelaCancelar.Name = "janelaCancelar";
-            //janelaCancelar.Show();
             new JanelaCancelamento().Show();
         }
 
@@ -99,25 +63,8 @@ namespace AgendamentoView
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void botaoFechar_Event(object sender, EventArgs e)
+        private void BotaoFechar_Event(object sender, EventArgs e)
         {
-            /*
-            string message = "Deseja fechar esta janela?";
-            string caption = "Botão de Fechar Agendamentos";
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show(message, caption, buttons);
-
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-            }
-            */
-
-            // TODO: transformar código abaixo em classe
-            //Form janelaFechar = new Form();
-            //janelaFechar.Text = "Fechar Agendamentos";
-            //janelaFechar.Name = "janelaFechar";
-            //janelaFechar.Show();
             new JanelaFechamento().Show();
         }
 
@@ -127,25 +74,8 @@ namespace AgendamentoView
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void botaoListar_Event(object sender, EventArgs e)
+        private void BotaoListar_Event(object sender, EventArgs e)
         {
-            /*
-            string message = "Deseja fechar esta janela?";
-            string caption = "Botão de Listar Agendamentos";
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show(message, caption, buttons);
-
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-            }
-            */
-
-            // TODO: transformar código abaixo em classe
-            //Form janelaListar = new Form();
-            //janelaListar.Text = "Listar Agendamentos";
-            //janelaListar.Name = "janelaListar";
-            //janelaListar.Show();
             new JanelaListagem().Show();
         }
 
@@ -155,25 +85,8 @@ namespace AgendamentoView
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void botaoDias_Event(object sender, EventArgs e)
+        private void BotaoDias_Event(object sender, EventArgs e)
         {
-            /*
-            string message = "Deseja fechar esta janela?";
-            string caption = "Botão de Dias Disponíveis";
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show(message, caption, buttons);
-
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-            }
-            */
-
-            // TODO: transformar código abaixo em classe
-            //Form janelaDias = new Form();
-            //janelaDias.Text = "Listar Dias Disponíveis";
-            //janelaDias.Name = "janelaDias";
-            //janelaDias.Show();
             new JanelaDisponibilidade().Show();
         }
 
@@ -183,34 +96,17 @@ namespace AgendamentoView
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void botaoEntregues_Event(object sender, EventArgs e)
+        private void BotaoEntregues_Event(object sender, EventArgs e)
         {
-            /*
-            string message = "Deseja fechar esta janela?";
-            string caption = "Botão de Agendamentos Entregues";
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show(message, caption, buttons);
-
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-            }
-            */
-
-            // TODO: transformar código abaixo em classe
-            //Form janelaEntregues = new Form();
-            //janelaEntregues.Text = "Listar Equipamentos Entregues";
-            //janelaEntregues.Name = "janelaEntregues";
-            //janelaEntregues.Show();
             new JanelaEntregues().Show();
         }
 
-        private void botaoRegEquipamento_Event(object sender, MouseEventArgs e)
+        private void BotaoRegEquipamento_Event(object sender, MouseEventArgs e)
         {
             new JanelaEquipamento().Show();
         }
 
-        private void botaoRegProfessor_Event(object sender, MouseEventArgs e)
+        private void BotaoRegProfessor_Event(object sender, MouseEventArgs e)
         {
             new JanelaProfessor().Show();
         }

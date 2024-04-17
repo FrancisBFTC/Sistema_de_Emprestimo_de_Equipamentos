@@ -1,15 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using AgendamentoModel;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Header;
 
 namespace AgendamentoView
 {
@@ -97,7 +91,6 @@ namespace AgendamentoView
 
                 foreach (var item in consulta)
                 {
-                    string id = item.Element("ID").Value;
                     string nome = item.Element("Nome").Value;
                     string equip = item.Element("Equipamento").Value;
                     string inicio = item.Element("DataInicial").Value;
@@ -119,11 +112,5 @@ namespace AgendamentoView
             listaListagem.EndUpdate();
         }
 
-        private void ListaListagem_ClickEvent(object sender, EventArgs e)
-        {
-            string message = "Índice do Item Clicado: " + listaListagem.SelectedIndex.ToString()
-                            + "\nItem Clicado: " + listaListagem.SelectedItem.ToString();
-            MessageBox.Show(message, "Click de Item", MessageBoxButtons.OK);
-        }
     }
 }

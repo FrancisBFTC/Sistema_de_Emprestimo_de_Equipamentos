@@ -193,6 +193,7 @@ namespace AgendamentoModel
             }
             catch (Exception e)
             {
+                e.GetHashCode();
                 return;
             }
             base.Excluir();
@@ -211,6 +212,7 @@ namespace AgendamentoModel
             }
             catch (Exception e)
             {
+                e.GetHashCode();
                 return null;
             }
             return base.Verificar();
@@ -232,6 +234,7 @@ namespace AgendamentoModel
             }
             catch (Exception e)
             {
+                e.GetHashCode();
                 return null;
             }
             return base.Verificar();
@@ -250,6 +253,7 @@ namespace AgendamentoModel
             }
             catch (Exception e)
             {
+                e.GetHashCode();
                 return null;
             }
             var consulta = from agenda in XmlDoc.Descendants(TipoRegistro)

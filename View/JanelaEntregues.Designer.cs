@@ -153,7 +153,6 @@
             this.listaEntregues.Name = "listaEntregues";
             this.listaEntregues.Size = new System.Drawing.Size(440, 184);
             this.listaEntregues.TabIndex = 0;
-            this.listaEntregues.DoubleClick += new System.EventHandler(this.ListaEntregues_ClickEvent);
             // 
             // JanelaEntregues
             // 

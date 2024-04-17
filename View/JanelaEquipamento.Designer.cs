@@ -60,7 +60,7 @@ namespace AgendamentoView
             this.botaoEquipamento.TabIndex = 26;
             this.botaoEquipamento.Text = "Cadastrar";
             this.botaoEquipamento.UseVisualStyleBackColor = false;
-            this.botaoEquipamento.Click += new System.EventHandler(this.botaoEquipamento_Event);
+            this.botaoEquipamento.Click += new System.EventHandler(this.BotaoEquipamento_Event);
             // 
             // textTipo
             // 
