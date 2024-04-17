@@ -1,0 +1,11 @@
+Regra de juros:
+
+Atualmente, a remuneração da poupança segue uma regra que muda de acordo com o nível dos juros básicos da economia brasileira. Então, quando a Selic está acima de 8,5% ao ano, a poupança paga 0,5% ao mês mais a variação da TR. Já quando os juros estão iguais ou abaixo de 8,5%, a remuneração é o equivalente a 70% da Selic mais a variação da TR.
+
+TR de 04/2024: 0.1023%
+Selic ao Ano: 10,75%
+Poupança exemplo: R$ 6000,00
+
+Selic > 8.5%?
+    sim: (0,5 + 0,1023) / 100 * 6000 = R$ 36,14
+    não: (70 / 100 * 8,5 + 0,1023) / 100 * 6000 = 363,14

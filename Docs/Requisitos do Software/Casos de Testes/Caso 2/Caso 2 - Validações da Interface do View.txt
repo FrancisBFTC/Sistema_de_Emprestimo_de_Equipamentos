@@ -1,0 +1,195 @@
+***********************************************************************************************
+2ª Caso de Teste: Validações de Entrada da Interface (View)
+***********************************************************************************************
+
+-----------------------------------------------------------------------------------------------
+Roteiros
+-----------------------------------------------------------------------------------------------
+1. Validação de campos vazios em JanelaAgendamento:
+    1.1. Validar campo textProfessor:
+        Entrada: Nenhuma
+        Saída: MessageBox = "Selecione o campo professor!"
+    1.2. Validar campo textEquipamento:
+        Entrada: Apenas "Wenderson Francisco" no campo anterior
+        Saída: MessageBox = "Selecione o campo equipamento!"
+    1.3. Validar campo textDataInicial:
+        Entrada: Campo1 + "Projetor de dados" nos campos anteriores
+        Saída: MessageBox = "Preencha o campo data inicial!"
+    1.4. Validar campo textDataFinal:
+        Entrada: Campo1 + Campo2 + "10/04/2024" nos campos anteriores
+        Saída: MessageBox = "Preencha o campo data final!"
+    1.5. Validar campo textHoraInicial:
+        Entrada: Campo1 + Campo2 + Campo3 + "11/04/2024" nos campos anteriores
+        Saída: MessageBox = "Preencha o campo data inicial!"
+    1.6. Validar campo textHoraFinal:
+        Entrada: Campo1 + Campo2 + Campo3 + campo4 + "09:00:00" nos campos anteriores
+        Saída: MessageBox = "Preencha o campo hora final!"
+    1.7. Validar todos os campos (Campo1..6 - "10:00:00"):
+        Entrada: Todos Preenchidos
+        Saída: MessageBox = "Agendamento de Empréstimo registrado com sucesso!"
+status: OK!
+-----------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------
+2. Validação de campos inválidos de Nome, Data e Hora em JanelaAgendamento:
+    2.1. Verificar tamanho de Data (Inicial/Final):
+        Entrada: 10/04/20
+        Saída: "Tamanho de data inválido!"
+    2.2. Verificar formato de Data com letras (Inicial/Final):
+        Entrada: 1o/o4/202A
+        Saída: "Formato de data inválido!"
+    2.3. Verificar tamanho de Hora (Inicial/Final):
+	Entrada: 12:5
+        Saída: "Tamanho de hora inválido!"
+    2.4. Verificar formato de Hora com letras (Inicial/Final):
+	Entrada: 12:5I:OO
+        Saída: "Formato de hora inválido!"
+    2.5. Verificar via regex o formato do nome - teste 1: 
+        Entrada: 1 palavra
+        Saída: "Formato de nome inválido!"
+    2.6. Verificar via regex o formato do nome - teste 2: 
+        Entrada: 1 palavra + espaço + numero
+        Saída: "Formato de nome inválido!"
+    2.7. Verificar via regex o formato do nome - teste 3: 
+        Entrada: 2 palavras + espaço + numero
+        Saída: "Formato de nome inválido!"
+    2.8. Verificar via regex o formato do nome - teste 4: 
+        Entrada: 2 palavras + espaço
+        Saída: "Agendamento de Empréstimo registrado com sucesso!"
+    2.9. Verificar via refex o formato das datas para dia (Inicial/Final):
+	Entrada: 00/04/2024
+        Saída: "Formato de data inválido!"
+    2.10. Verificar via refex o formato das datas para mês (Inicial/Final):
+	Entrada: 01/13/2024
+        Saída: "Formato de data inválido!"
+    2.11. Verificar via refex o formato das datas para ano (Inicial/Final):
+	Entrada: 01/04/3024
+        Saída: "Formato de data inválido!"
+    2.12. Verificar via refex o formato das datas substituindo barra por . (Inicial/Final):
+	Entrada: 01.04/2024
+        Saída: "Formato de data inválido!"
+    2.13. Verificar via refex o formato das datas (Inicial/Final):
+	Entrada: 01/04/2024
+        Saída: "Agendamento de Empréstimo registrado com sucesso!"
+    2.14. Verificar via refex o formato das horas para hora (Inicial/Final):
+	Entrada: 24:01:01
+        Saída: "Formato de hora inválido!"
+    2.15. Verificar via refex o formato das horas para minuto (Inicial/Final):
+	Entrada: 18:60:01
+        Saída: "Formato de hora inválido!"
+    2.16. Verificar via refex o formato das horas para segundo (Inicial/Final):
+	Entrada: 18:39:99
+        Saída: "Formato de hora inválido!"
+    2.17. Verificar via refex o formato das horas para segundo (Inicial/Final):
+	Entrada: 18:05:00
+        Saída: "Agendamento de Empréstimo registrado com sucesso!"
+status: OK!
+-----------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------
+3. Validação de campos vazios em JanelaProfessor:
+    3.1. Validar campo textProfessor:
+        Entrada: Nenhuma
+        Saída: MessageBox = "Preencha o campo professor!"
+    3.2. Validar campo textDisciplina:
+        Entrada: Apenas "Wenderson Francisco" no campo anterior
+        Saída: MessageBox = "Preencha o campo disciplina!"
+    3.3. Validar campo textTurmas:
+        Entrada: Campo1 + "Tecnologia" nos campos anteriores
+        Saída: MessageBox = "Preencha o campo turmas!"
+    3.4. Validar todos os campos (Campo1..3 - "6ªA e 7ªB"):
+        Entrada: Todos Preenchidos
+        Saída: MessageBox = "Professor cadastrado com sucesso!"
+status: OK!
+-----------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------
+4. Validação de campos vazios em JanelaEquipamento:
+    4.1. Validar campo textEquipamento:
+        Entrada: Nenhuma
+        Saída: MessageBox = "Preencha o campo equipamento!"
+    4.2. Validar campo textTipo:
+        Entrada: Apenas "Televisor" no campo anterior
+        Saída: MessageBox = "Preencha o campo tipo!"
+    4.3. Validar campo textQuantidade:
+        Entrada: Campo1 + "Visual" nos campos anteriores
+        Saída: MessageBox = "Preencha o campo quantidade!"
+    4.4. Validar todos os campos (Campo1..3 - "3"):
+        Entrada: Todos Preenchidos
+        Saída: MessageBox = "Equipamento cadastrado com sucesso!"
+status: OK!
+-----------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------
+5. Validação de formato do campo Professor em JanelaProfessor:
+    5.1. Verificar campo com 1 palavra:
+        Entrada: "Wenderson"
+        Saída: MessageBox = "Formato de nome inválido! Não é permitido números ou nomes imcompletos"
+    5.2. Verificar campo com 1 palavra + numero:
+        Entrada: "Wenderson27"
+        Saída: MessageBox = "Formato de nome inválido! Não é permitido números ou nomes imcompletos"
+    5.3. Verificar campo com 2 palavras + espaço + numero:
+        Entrada: "Wenderson Francisco27"
+        Saída: MessageBox = "Formato de nome inválido! Não é permitido números ou nomes imcompletos"
+    5.4. Verificar campo com 2 palavras + espaço:
+        Entrada: "Wenderson Francisco"
+        Saída: MessageBox = "Professor cadastrado com sucesso!"
+status: OK!
+-----------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------
+5. Validação de formato do campo Professor em JanelaProfessor:
+    5.1. Verificar campo com 1 palavra:
+        Entrada: "Wenderson"
+        Saída: MessageBox = "Formato de nome inválido! Não é permitido números ou nomes imcompletos"
+    5.2. Verificar campo com 1 palavra + numero:
+        Entrada: "Wenderson27"
+        Saída: MessageBox = "Formato de nome inválido! Não é permitido números ou nomes imcompletos"
+    5.3. Verificar campo com 2 palavras + espaço + numero:
+        Entrada: "Wenderson Francisco27"
+        Saída: MessageBox = "Formato de nome inválido! Não é permitido números ou nomes imcompletos"
+    5.4. Verificar campo com 2 palavras + espaço:
+        Entrada: "Wenderson Francisco"
+        Saída: MessageBox = "Professor cadastrado com sucesso!"
+status: OK!
+-----------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------
+6. Seleção de Itens em JanelaCancelamento, Fechamento, Listagem, Entregues e Disponibilidade:
+    6.1. Selecionar Item 1 em textProfessor de JanelaCancelamento:
+        Entrada: "Wenderson"
+        Saída: ListBox = "Wenderson : 0 ... Wenderson : 9"
+    6.2. Selecionar Item 1 em textItem de JanelaCancelamento:
+        Entrada: "Projetor de Dados"
+        Saída: ListBox = "Projetor de Dados : 0 ... Projetor de Dados : 9"
+
+    6.3. Selecionar Item 2 em textProfessor de JanelaFechamento:
+        Entrada: "Gabriel"
+        Saída: ListBox = "Gabriel : 0 ... Gabriel : 9"
+    6.4. Selecionar Item 2 em textItem de JanelaFechamento:
+        Entrada: "Televisor 4K"
+        Saída: ListBox = "Televisor 4K : 0 ... Televisor 4K : 9"
+
+    6.5. Selecionar Item 3 em textProfessor de JanelaListagem:
+        Entrada: "Joana"
+        Saída: ListBox = "Joana : 0 ... Joana : 9"
+    6.6. Selecionar Item 3 em textItem de JanelaListagem:
+        Entrada: "Caixa de Som"
+        Saída: ListBox = "Caixa de Som : 0 ... Caixa de Som : 9"
+
+    6.7. Selecionar Item 1 em textProfessor de JanelaEntregues:
+        Entrada: "Gabriel"
+        Saída: ListBox = "Gabriel : 0 ... Gabriel : 9"
+    6.8. Selecionar Item 1 em textItem de JanelaEntregues:
+        Entrada: "Televisor 4K"
+        Saída: ListBox = "Televisor 4K : 0 ... Televisor 4K : 9"
+
+    6.9. Selecionar Item 2 em textProfessor de JanelaDisponibilidade:
+        Entrada: "Dia 3"
+        Saída: ListBox = "Dia 3 : 0 ... Dia 3 : 9"
+    6.10. Selecionar Item 2 em textItem de JanelaDisponibilidade:
+        Entrada: "Hora 2"
+        Saída: ListBox = "Hora 2 : 0 ... Hora 2 : 9"
+status: OK!
+-----------------------------------------------------------------------------------------------

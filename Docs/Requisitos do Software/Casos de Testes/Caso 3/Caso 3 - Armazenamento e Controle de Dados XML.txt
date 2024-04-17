@@ -1,0 +1,130 @@
+***********************************************************************************************
+3ª Caso de Teste: Armazenamento e Controle de Dados XML (MVC)
+***********************************************************************************************
+
+-----------------------------------------------------------------------------------------------
+Roteiros
+-----------------------------------------------------------------------------------------------
+1. Cadastrar novo professor
+    1.1. Inserir 1ª professor nos campos - Professor, Disciplina e Turmas:
+        Entrada: Wenderson Francisco, Tecnologia, 6ª e 7ª
+	Saída: XML = Dados relativos ao cadastrado em Professor.xml com ID=1
+    1.2. Inserir 2ª professor nos campos - Professor, Disciplina e Turmas:
+        Entrada: Matheus Henrique, Portugues, 5ª e 8ª
+	Saída: XML = Dados relativos ao cadastrado em Professor.xml com ID=2
+-----------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------
+Roteiros
+-----------------------------------------------------------------------------------------------
+2. Cadastrar novo equipamento
+    2.1. Inserir 1ª equipamento nos campos - Equipamento, Tipo e Quantidade:
+        Entrada: Caixa de Som, Auditivo, 5
+	Saída: XML = Dados relativos ao cadastrado em Equipamento.xml com ID=1
+    2.2. Inserir 2ª equipamento nos campos - Equipamento, Tipo e Quantidade:
+        Entrada: Projetor de Dados, Visual, 3
+	Saída: XML = Dados relativos ao cadastrado em Equipamento.xml com ID=2
+-----------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------
+Roteiros
+-----------------------------------------------------------------------------------------------
+3. Agendar novo empréstimo
+    3.1. Criar 1ª agenda nos campos - Professor, Equipamento, DataInicial, Hora Inicial, Data Final e Hora Final:
+        Entrada: Wenderson Francisco, Projetor de Dados, 14/04/2024, 22:00:00, 14/04/2024, 23:00:00
+	Saída: XML = Dados relativos ao cadastrado em Emprestimo.xml com ID=1
+    3.2. Criar 2ª agenda nos campos - Professor, Equipamento, DataInicial, Hora Inicial, Data Final e Hora Final:
+        Entrada: Matheus Henrique, Caixa de Som, 15/04/2024, 07:00:00, 15/04/2024, 09:00:00
+	Saída: XML = Dados relativos ao cadastrado em Emprestimo.xml com ID=2
+    3.3. Criar 3ª agenda nos campos - Professor, Equipamento, DataInicial, Hora Inicial, Data Final e Hora Final de Matheus com datas dentro da faixa que a 1ª agenda (Wenderson):
+        Entrada: Matheus Henrique, Caixa de Som, 14/04/2024, 22:30:00, 14/04/2024, 22:50:00
+	Saída: Tela de Erro = A data escolhida não está disponível! Por favor, verificar na lista de dias disponíveis!
+    3.4. Saídas de dias livres diferentes dos agendamentos:
+        Saída: XML = Intervalos de datas/horários livres
+-----------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------
+Roteiros
+-----------------------------------------------------------------------------------------------
+4. Listar dias disponíveis para empréstimo
+    4.1. Abrir janela de listagem de dias disponíveis:
+        Saída: Datas diferentes entre as faixas daquelas que foram agendadas
+    4.2. Entrar com um número do dia no campo Data para Filtragem:
+        Entrada: 14
+        Saída: 14/04/2024 21:56:12, 14/04/2024 22:00:00
+               14/04/2024 23:00:00, 15/04/2024 07:00:00
+        Entrada: 13
+        Saída: Nenhuma
+	Entrada: Data
+        Saída: 15/04/2024 09:00:00, Data Indefinida
+    4.3. Entrar com um número de hora no campo Data para Filtragem:
+        Entrada: 22
+        Saída: 14/04/2024 21:56:12, 14/04/2024 22:00:00
+        Entrada: 7
+        Saída: 14/04/2024 23:00:00, 15/04/2024 07:00:00
+	Entrada: 9
+        Saída: 15/04/2024 09:00:00, Data Indefinida 
+-----------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------
+Roteiros
+-----------------------------------------------------------------------------------------------
+5. Listar empréstimos atuais
+    5.1. Abrir janelas de empréstimos:
+        Saída: Datas iguais daquelas que foram agendadas
+    5.2. Filtrar por nome os dados agendados:
+        Entrada: Wenderson Francisco
+        Saída: Wenderson Francisco, Projetor de Dados, ...
+    5.3. Filtrar por item os dados agendados:
+        Entrada: Caixa de Som
+        Saída: Matheus Henrique, Caixa de Som, ...
+-----------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------
+Roteiros
+-----------------------------------------------------------------------------------------------
+6. Cancelar empréstimos
+    6.1. Inserir entrada no campo Nome para a filtragem do emprestimo:
+        Entrada: Wenderson Francisco
+        Saída: Wenderson Francisco, Projetor de Dados
+    6.2. Clicar no botão para cancelar o emprestimo com ID=1 + seleção de linha:
+        Entrada: Click em "Cancelar"
+        Saída: XML = Wenderson Francisco Excluído de Emprestimo.xml
+    6.3. Abrir janela pra listar agendamentos:
+        Saída: Matheus Henrique, Caixa de Som
+-----------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------
+Roteiros
+-----------------------------------------------------------------------------------------------
+7. Fechar empréstimos
+    7.1. Inserir entrada no campo Item para a filtragem do emprestimo:
+        Entrada: Caixa de Som
+        Saída: Matheus Henrique, Caixa de Som
+    7.2. Clicar no botão para fechar o emprestimo com ID=2 + seleção de linha:
+        Entrada: Click em "Fechar"
+        Saída: XML = Matheus Henrique Excluído de Emprestimo.xml
+    7.3. Abrir janela pra listar agendamentos:
+        Saída: Nenhuma
+    7.4. Abrir janela para listar entregues:
+	Saída: Matheus Henrique, Caixa de Som, 15/04/2024 07:00:00, 15/04/2024 09:00:00
+    7.5: Abrir janela para listar dias disponíveis:
+        Saída: Novo dia disponível = 15/04/2024 07:00:00, 15/04/2024 09:00:00
+-----------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------
+Roteiros
+-----------------------------------------------------------------------------------------------
+8. Listar equipamentos entregues
+    8.1. Criar +2 agendamentos e fechá-los imediatamente em JanelaAgendamento:
+         Entradas: Wenderson Francisco, Caixa de Som
+                   Matheus Henrique, Projetor de Dados
+         Saída: Em JanelaEntregues = Os dois dados fechados + 1 dado anterior (Matheus Henrique)
+                Em Entregues.xml = Os 3 dados cujos IDs são: 1, 2 e 3
+                Em Dias Disponíveis = As novas 2 datas 
+-----------------------------------------------------------------------------------------------

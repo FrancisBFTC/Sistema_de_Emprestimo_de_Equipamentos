@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Equipamento>
+    <LastID>0</LastID>
+  </Equipamento>
+  <Professor>
+    <LastID>0</LastID>
+  </Professor>
+  <Emprestimo>
+    <LastID>0</LastID>
+  </Emprestimo>
+  <Entregues>
+    <LastID>0</LastID>
+  </Entregues>
+</Config>
