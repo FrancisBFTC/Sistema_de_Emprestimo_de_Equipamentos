@@ -9,7 +9,7 @@ using System.Xml.Linq;
 
 namespace AgendamentoView
 {
-    
+
     public partial class JanelaAgendamento : Form
     {
         /// <summary>
@@ -103,7 +103,7 @@ namespace AgendamentoView
         /// <param name="e">Eventos de Clique</param>
         private void BotaoAgendar_Event(object sender, EventArgs e)
         {
-            
+
             String conteudoProfessor = textProfessor.Text;
             String conteudoEquipamento = textEquipamento.Text;
             String conteudoDataInicial = textDataInicial.Text;
@@ -155,7 +155,7 @@ namespace AgendamentoView
                 return;
 
             isAvailable = Agendamento.VerificarDisponibilidade($"{conteudoDataInicial} {conteudoHoraInicial}",
-                                            $"{conteudoDataFinal} {conteudoHoraFinal}");
+                                                               $"{conteudoDataFinal} {conteudoHoraFinal}");
 
             if (!isAvailable)
             {

@@ -88,7 +88,7 @@ namespace AgendamentoView
             this.botaoListar.TabIndex = 3;
             this.botaoListar.Text = "Listar Agendamento";
             this.botaoListar.UseVisualStyleBackColor = false;
-            this.botaoListar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.botaoListar_Event);
+            this.botaoListar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.BotaoListar_Event);
             // 
             // botaoFechar
             // 
@@ -108,7 +108,7 @@ namespace AgendamentoView
             this.botaoFechar.TabIndex = 2;
             this.botaoFechar.Text = "Fechar Agendamento";
             this.botaoFechar.UseVisualStyleBackColor = false;
-            this.botaoFechar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.botaoFechar_Event);
+            this.botaoFechar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.BotaoFechar_Event);
             // 
             // botaoCancelar
             // 
@@ -128,7 +128,7 @@ namespace AgendamentoView
             this.botaoCancelar.TabIndex = 1;
             this.botaoCancelar.Text = "Cancelar Agendamento";
             this.botaoCancelar.UseVisualStyleBackColor = false;
-            this.botaoCancelar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.botaoCancelar_Event);
+            this.botaoCancelar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.BotaoCancelar_Event);
             // 
             // botaoCriar
             // 
@@ -148,7 +148,7 @@ namespace AgendamentoView
             this.botaoCriar.TabIndex = 0;
             this.botaoCriar.Text = "Criar Agendamento";
             this.botaoCriar.UseVisualStyleBackColor = false;
-            this.botaoCriar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.botaoCriar_Event);
+            this.botaoCriar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.BotaoCriar_Event);
             // 
             // grupoDisponibilidade
             // 
@@ -185,7 +185,7 @@ namespace AgendamentoView
             this.botaoEntregues.TabIndex = 3;
             this.botaoEntregues.Text = "Equipamentos Entregues";
             this.botaoEntregues.UseVisualStyleBackColor = false;
-            this.botaoEntregues.MouseClick += new System.Windows.Forms.MouseEventHandler(this.botaoEntregues_Event);
+            this.botaoEntregues.MouseClick += new System.Windows.Forms.MouseEventHandler(this.BotaoEntregues_Event);
             // 
             // botaoDias
             // 
@@ -205,7 +205,7 @@ namespace AgendamentoView
             this.botaoDias.TabIndex = 2;
             this.botaoDias.Text = "Listar Dias Disponíveis";
             this.botaoDias.UseVisualStyleBackColor = false;
-            this.botaoDias.MouseClick += new System.Windows.Forms.MouseEventHandler(this.botaoDias_Event);
+            this.botaoDias.MouseClick += new System.Windows.Forms.MouseEventHandler(this.BotaoDias_Event);
             // 
             // groupBox1
             // 
@@ -242,7 +242,7 @@ namespace AgendamentoView
             this.botaoRegEquipamento.TabIndex = 3;
             this.botaoRegEquipamento.Text = "Cadastrar Equipamentos";
             this.botaoRegEquipamento.UseVisualStyleBackColor = false;
-            this.botaoRegEquipamento.MouseClick += new System.Windows.Forms.MouseEventHandler(this.botaoRegEquipamento_Event);
+            this.botaoRegEquipamento.MouseClick += new System.Windows.Forms.MouseEventHandler(this.BotaoRegEquipamento_Event);
             // 
             // botaoRegProfessor
             // 
@@ -262,7 +262,7 @@ namespace AgendamentoView
             this.botaoRegProfessor.TabIndex = 2;
             this.botaoRegProfessor.Text = "Cadastrar Professores";
             this.botaoRegProfessor.UseVisualStyleBackColor = false;
-            this.botaoRegProfessor.MouseClick += new System.Windows.Forms.MouseEventHandler(this.botaoRegProfessor_Event);
+            this.botaoRegProfessor.MouseClick += new System.Windows.Forms.MouseEventHandler(this.BotaoRegProfessor_Event);
             // 
             // JanelaPrincipal
             // 

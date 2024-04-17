@@ -55,15 +55,15 @@ namespace AgendamentoView
 
                 textBox = (TextBox)sender;
                 int i = textBox.Equals(textData) ? 0 : 1;
-                    
-                    var dadoXML = from registro in emprestimo.XmlDoc.Descendants(emprestimo.TipoRegistro)
+
+                var dadoXML = from registro in emprestimo.XmlDoc.Descendants(emprestimo.TipoRegistro)
                               where ((String)registro.Element("DataInicial")).Split(' ')[i].Contains(textBox.Text) ||
                                     ((String)registro.Element("DataFinal")).Split(' ')[i].Contains(textBox.Text)
-                                  select registro;
-                    consulta = dadoXML;
-           
+                              select registro;
+                consulta = dadoXML;
+
             }
-               
+
             if (consulta.Any())
             {
 

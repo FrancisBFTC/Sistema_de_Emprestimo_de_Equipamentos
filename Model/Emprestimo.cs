@@ -112,7 +112,7 @@ namespace AgendamentoModel
         {
             Console.WriteLine($"Dando baixa em agendamento de equipamento {this.Equipamento}" +
                               $" em nome de {this.Nome}, agendado de {this.DataInicial} até {this.DataFinal}");
-            
+
             XmlDoc = XDocument.Load("Registros/Emprestimo.xml");
             XmlElement = from registro in XmlDoc.Descendants(TipoRegistro)
                          where ((int)registro.Element("ID")) == this.ID
@@ -292,7 +292,7 @@ namespace AgendamentoModel
         {
             XDocument getConfig = XDocument.Load("Registros/Config.xml");
             IEnumerable<XElement> LastID = from registro in getConfig.Descendants(TipoRegistro)
-                          select registro;
+                                           select registro;
             int.TryParse(LastID.ElementAt(0).Element("LastID").Value, out int theID);
             XmlDoc = new XDocument(
                         new XElement("Registros",
@@ -316,7 +316,7 @@ namespace AgendamentoModel
         {
             XDocument getConfig = XDocument.Load("Registros/Config.xml");
             IEnumerable<XElement> LastID = from registro in getConfig.Descendants(TipoRegistro)
-                                        select registro;
+                                           select registro;
             int.TryParse(LastID.ElementAt(0).Element("LastID").Value, out int theID);
             XElement novoRegistro = new XElement(TipoRegistro,
                                         new XElement("ID", ++theID),

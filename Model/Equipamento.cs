@@ -27,8 +27,8 @@ namespace AgendamentoModel
         /// </summary>
         public override XDocument XmlDoc
         {
-            get => base.XmlDoc; 
-            set => base.XmlDoc = value; 
+            get => base.XmlDoc;
+            set => base.XmlDoc = value;
         }
 
         /// <summary>

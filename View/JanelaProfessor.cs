@@ -23,7 +23,7 @@ namespace AgendamentoView
             String conteudoProfessor = textProfessor.Text;
             String conteudoDisciplina = textDisciplina.Text;
             String conteudoTurmas = textTurmas.Text;
-   
+
             bool emptyInput, errorFormat;
 
             if (emptyInput = conteudoProfessor == "")

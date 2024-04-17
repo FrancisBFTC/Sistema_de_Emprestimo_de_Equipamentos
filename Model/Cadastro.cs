@@ -5,7 +5,7 @@ using System.Xml.Linq;
 
 namespace AgendamentoModel
 {
-    
+
     public class Cadastro
     {
         /// <summary>

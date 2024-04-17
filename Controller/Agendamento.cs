@@ -122,7 +122,7 @@ namespace SistemaEmprestimo.Controller
                     {
                         String dataFinalTemp = item.Element("DataFinal").Value;
                         bool isComparacaoInicial = false;
-  
+
                         if (comparacaoInicial1 != 0)
                         {
                             isComparacaoInicial = true;
@@ -149,7 +149,7 @@ namespace SistemaEmprestimo.Controller
                                 emprestimo.XmlDoc.Root.Add(novaData);
                                 emprestimo.XmlDoc.Save("Registros/" + emprestimo.TipoRegistro + ".xml");
                             }
-  
+
                         }
 
                         if (comparacaoInicial1 == 0 && comparacaoFinal2 == 0)
@@ -167,7 +167,7 @@ namespace SistemaEmprestimo.Controller
                     }
 
                 } // Fim Else : DataFinal != None
-                
+
             }
 
             return horarioLivre;

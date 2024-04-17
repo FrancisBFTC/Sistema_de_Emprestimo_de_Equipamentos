@@ -160,12 +160,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="..\SistemaAgendamento\.editorconfig">
-      <Link>.editorconfig</Link>
-    </None>
-    <None Include="..\SistemaAgendamento\README.md">
-      <Link>README.md</Link>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -190,14 +184,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="..\SistemaAgendamento\.gitattributes">
-      <Link>.gitattributes</Link>
-    </Content>
-    <Content Include="..\SistemaAgendamento\.gitignore">
-      <Link>.gitignore</Link>
-    </Content>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
