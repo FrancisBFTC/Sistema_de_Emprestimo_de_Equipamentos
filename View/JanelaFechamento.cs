@@ -63,6 +63,11 @@ namespace AgendamentoView
         {
             string itemText = e.ClickedItem.Text;
             textBox.Text = itemText;
+            UpdateTable(itemText);
+        }
+
+        private void UpdateTable(string itemText)
+        {
             listaFechamento.BeginUpdate();
             listaFechamento.Items.Clear();
 
@@ -118,6 +123,7 @@ namespace AgendamentoView
 
                     new Emprestimo(id).Fechar();
                     MessageBox.Show("O agendamento ID=" + id + " foi fechado com sucesso!");
+                    UpdateTable(textBox.Text);
                 }
                 else
                 {

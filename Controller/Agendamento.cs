@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Forms;
 using System.Xml.Linq;
 
 namespace SistemaEmprestimo.Controller
@@ -18,13 +19,34 @@ namespace SistemaEmprestimo.Controller
         public static void AtribuirDisponibilidade(String dataInicial, String dataFinal)
         {
             Emprestimo emprestimo = new Emprestimo();
-            emprestimo.ColetarLivres();
-            XElement novaData = new XElement(emprestimo.TipoRegistro,
+            IEnumerable<XElement> livres = emprestimo.ColetarLivres();
+            DateTime tempoInicial = Convert.ToDateTime(dataInicial);
+            DateTime tempoFinal = Convert.ToDateTime(dataFinal);
+            bool mesmaData = false;
+            if (livres.Any())
+            {
+                foreach (var livre in livres)
+                {
+                    String iniData = livre.Element("DataInicial").Value;
+                    String fimData = livre.Element("DataFinal").Value;
+                    int comparacaoInicial1 = DateTime.Compare(tempoInicial, Convert.ToDateTime(iniData));
+                    int comparacaoFinal2 = (fimData != "Data Indefinida") ? 
+                                           DateTime.Compare(tempoFinal, Convert.ToDateTime(fimData))
+                                           : -1;
+                    mesmaData = (comparacaoInicial1 == 0 && comparacaoFinal2 == 0);
+                    if (mesmaData)
+                        break;
+                }
+            }
+            if (!mesmaData)
+            {
+                XElement novaData = new XElement(emprestimo.TipoRegistro,
                                                         new XElement("DataInicial", dataInicial.ToString()),
                                                         new XElement("DataFinal", dataFinal.ToString())
                                                     );
-            emprestimo.XmlDoc.Root.Add(novaData);
-            emprestimo.XmlDoc.Save("Registros/" + emprestimo.TipoRegistro + ".xml");
+                emprestimo.XmlDoc.Root.Add(novaData);
+                emprestimo.XmlDoc.Save("Registros/" + emprestimo.TipoRegistro + ".xml");
+            }
         }
 
         /// <summary>
@@ -67,6 +89,7 @@ namespace SistemaEmprestimo.Controller
         {
             DateTime tempoInicial = Convert.ToDateTime(dataInicial);
             DateTime tempoFinal = Convert.ToDateTime(dataFinal);
+
             Emprestimo emprestimo = new Emprestimo();
             IEnumerable<XElement> consulta = emprestimo.ColetarLivres();
 
@@ -172,6 +195,43 @@ namespace SistemaEmprestimo.Controller
 
             return horarioLivre;
 
+        }
+
+        public static bool VerificarDisponibilidade(String equipamento, String dataInicial, String dataFinal)
+        {
+            bool isAvailable = false;
+
+            IEnumerable<XElement> equipamentos = new Equipamento(equipamento).Verificar();
+            if (equipamentos.Any())
+            {
+                String quantstring = equipamentos.ElementAt(0).Element("Quantidade").Value;
+                int.TryParse(quantstring, out int quantidade);
+                IEnumerable<XElement> emprestimos = new Emprestimo(equipamento).Verificar();
+
+                DateTime agendaInicial = Convert.ToDateTime(dataInicial);
+                DateTime agendaFinal = Convert.ToDateTime(dataFinal);
+                int contador = 0;
+
+                foreach (var item in emprestimos)
+                {
+                    DateTime ocupadoInicial = Convert.ToDateTime(item.Element("DataInicial").Value);
+                    DateTime ocupadoFinal = Convert.ToDateTime(item.Element("DataFinal").Value);
+                    int comparacaoInicial1 = DateTime.Compare(agendaInicial, ocupadoInicial);
+                    int comparacaoFinal1 = DateTime.Compare(agendaInicial, ocupadoFinal);
+                    int comparacaoInicial2 = DateTime.Compare(agendaFinal, ocupadoInicial);
+                    int comparacaoFinal2 = DateTime.Compare(agendaFinal, ocupadoFinal);
+
+                    bool dentroDaFaixa1 = (comparacaoInicial1 >= 0 && comparacaoFinal1 <= 0);
+                    bool dentroDaFaixa2 = (comparacaoInicial2 >= 0 && comparacaoFinal2 <= 0);
+                    bool dentroDaFaixa = dentroDaFaixa1 && dentroDaFaixa2;
+
+                    if (dentroDaFaixa)
+                        ++contador;
+                }
+                isAvailable = ((contador + 1) >= quantidade);
+
+            }
+            return isAvailable;
         }
 
 

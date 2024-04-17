@@ -154,9 +154,13 @@ namespace AgendamentoView
             if (errorFormat)
                 return;
 
-            isAvailable = Agendamento.VerificarDisponibilidade($"{conteudoDataInicial} {conteudoHoraInicial}",
+            bool toApply = Agendamento.VerificarDisponibilidade(conteudoEquipamento, $"{conteudoDataInicial} {conteudoHoraInicial}",
                                                                $"{conteudoDataFinal} {conteudoHoraFinal}");
 
+            isAvailable = (toApply) ? Agendamento.VerificarDisponibilidade($"{conteudoDataInicial} {conteudoHoraInicial}",
+                                                               $"{conteudoDataFinal} {conteudoHoraFinal}")
+                                    : !toApply;
+ 
             if (!isAvailable)
             {
                 MessageBox.Show("A data escolhida não está disponível! \n" +

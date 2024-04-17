@@ -57,6 +57,18 @@ namespace AgendamentoModel
         }
 
         /// <summary>
+        /// Construtor principal da Classe Equipamento para instanciação
+        /// e atribuição de novos registros | Formação do arquivo completo
+        /// </summary>
+        /// <param name="nome">Nome do equipamento</param>
+        public Equipamento(String nome) : base()
+        {
+            this.Nome = nome;
+            XmlPath += "Equipamento.xml";
+            TipoRegistro = "Equipamento";
+        }
+
+        /// <summary>
         /// Construtor sobrecarregado de Equipamento, que instancia a classe Herdada
         /// Neste construtor não é necessário definir os atributos de dados
         /// </summary>

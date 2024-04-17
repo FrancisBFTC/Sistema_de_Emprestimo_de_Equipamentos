@@ -63,6 +63,11 @@ namespace AgendamentoView
         {
             string itemText = e.ClickedItem.Text;
             textBox.Text = itemText;
+            UpdateTable(itemText);
+        }
+
+        private void UpdateTable(string itemText)
+        {
             listaCancelamento.BeginUpdate();
             listaCancelamento.Items.Clear();
 
@@ -119,6 +124,7 @@ namespace AgendamentoView
 
                     new Emprestimo(id).Cancelar();
                     MessageBox.Show("O agendamento ID=" + id + " foi cancelado com sucesso!");
+                    UpdateTable(textBox.Text);
                 }
                 else
                 {
